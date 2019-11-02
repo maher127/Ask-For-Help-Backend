@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
     description,
     categories
   } = req.body;
-  var newMessage = new Message({
+  var newJobber = new Jobber({
     nom,
     prenom,
     userName,
@@ -36,9 +36,9 @@ router.post("/", (req, res) => {
     categories
   });
 
-  newMessage
+  newJobber
     .save()
-    .then(message => res.json(message))
+    .then(jobbers => res.json(jobbers))
     .catch(err => console.log(err));
 });
 
