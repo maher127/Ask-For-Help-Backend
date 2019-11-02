@@ -1,4 +1,4 @@
-const mongoose = rquire("mongoose");
+const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -28,17 +28,17 @@ const UserSchema = new mongoose.Schema({
     type: String
   },
   region: {
-    type: string
+    type: String
   },
   ville: {
-    type: string
+    type: String
   },
   dateInscription: {
-    type: date,
+    type: String,
     default: Date.now
   },
   genre: {
-    type: string
+    type: String
   },
   image: {
     type: String

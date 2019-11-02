@@ -1,14 +1,14 @@
-const mongoose = rquire("mongoose");
+const mongoose = require("mongoose");
 const JobberSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
   userName: {
     type: String,
     required: true
   },
-  lastName: {
+  nom: {
+    type: String,
+    required: true
+  },
+  prenom: {
     type: String,
     required: true
   },
@@ -28,17 +28,17 @@ const JobberSchema = new mongoose.Schema({
     type: String
   },
   region: {
-    type: string
+    type: String
   },
   ville: {
-    type: string
+    type: String
   },
   dateInscription: {
-    type: date,
+    type: String,
     default: Date.now
   },
   genre: {
-    type: string
+    type: String
   },
   verfied: {
     type: Boolean
@@ -54,6 +54,9 @@ const JobberSchema = new mongoose.Schema({
   },
   rating: {
     type: Number
+  },
+  categories: {
+    type: Array
   }
 });
 module.exports = Jobber = mongoose.model("jobber", JobberSchema);

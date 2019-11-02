@@ -3,7 +3,7 @@ const router = express.Router();
 //@route GET api/profil
 //@des   Test router
 // @acces Public
-router.get("/", (req, re) => {
+router.get("/profil", (req, re) => {
   res.send("Profil route");
 });
 module.exports = router;

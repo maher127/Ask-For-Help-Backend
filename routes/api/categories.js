@@ -5,7 +5,7 @@ const Categories = require("../../models/categories");
 //@des   Test router
 // @acces Public
 
-router.get("/categories", (req, res) => {
+router.get("/", (req, res) => {
   //
   Categories.find()
     .then(categories => res.json(categories))
